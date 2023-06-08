@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+  background-color: #333;
+  margin: 0;
+}
+
+.module {
+  height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  margin: 0 auto;
+
+  overflow: hidden;
+  
+}
+
+.module__item {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  
+  max-width: 430px;
+  padding-left: 20px;
+  padding-right: 20px;
+      justify-content: space-between;
+
+    flex-direction: column;
+}
+.btn{
+    width: 100%;
+    height: 64px;
+    background: green;
+    margin-bottom: 60px;
+}
+
+
+    </style>
+    <div class="module">
+  <div class="module__item">
+    <h1>HEad</h1>
+            <div class="btn">Next</div>
+  </div>
+
+</div>
+
+<script>// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);</script>
+</body>
+</html>
